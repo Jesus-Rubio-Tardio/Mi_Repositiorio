@@ -1,0 +1,51 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 03/09/2023 11:23:21 AM
+-- Design Name: 
+-- Module Name: BUTTON_LED - Behavioral
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity BUTTON_LED is
+generic( Buttons : integer := 4); --La arty A7 tiene 4 botones
+Port ( 
+    Led_out: out std_logic_vector(Buttons-1 downto 0);
+    A :  in std_logic_vector(Buttons-1 downto 0);
+    Enable :  in std_logic
+);
+end BUTTON_LED;
+
+architecture Behavioral of BUTTON_LED is
+
+begin
+
+    --we're gonna set outputs of the LED
+        Led_out <= A when Enable = '0' else (others => '0');
+
+
+end Behavioral;

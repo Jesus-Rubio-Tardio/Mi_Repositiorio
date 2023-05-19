@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "BUTTON_LED_behav" "xil_defaultlib.BUTTON_LED" -log "elaborate.log" 
