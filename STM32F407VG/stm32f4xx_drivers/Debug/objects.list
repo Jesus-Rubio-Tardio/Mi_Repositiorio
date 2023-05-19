@@ -1,0 +1,5 @@
+"./Src/006spi_tx_testing.o"
+"./Startup/startup_stm32f407vgtx.o"
+"./drivers/Src/spi_driver.o"
+"./drivers/Src/stm32f4xx_gpio_driver.o"
+"./drivers/Src/usart_driver.o"
